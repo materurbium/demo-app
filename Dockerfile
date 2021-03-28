@@ -15,7 +15,7 @@ COPY app/spec ./spec
 COPY app/src ./src
 RUN yarn test
 
-# Clear out the node_modules and create the zip
+# Clear out the node_modules and creates the zip
 FROM app-base AS app-zip-creator
 RUN rm -rf node_modules && \
     apk add zip && \
